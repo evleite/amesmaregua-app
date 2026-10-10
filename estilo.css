@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600&display=swap");
+
+:root {
+  --grafite: #0F0F11;
+  --offwhite: #F4F4F5;
+  --violeta: #7C3AED;
+  --violeta-claro: #A78BFA;
+  --apoio: #475569;
+  --fundo: var(--offwhite);
+  --texto: var(--grafite);
+  --suave: var(--apoio);
+  --destaque: var(--violeta);
+  --linha: #D4D4D8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: var(--grafite);
+    --texto: var(--offwhite);
+    --suave: #A1A1AA;
+    --destaque: var(--violeta-claro);
+    --linha: #27272A;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font: 400 1rem/1.65 "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+}
+
+.marca {
+  font-family: "Anton", Impact, "Arial Narrow", sans-serif;
+  font-size: 2.25rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin: 0 0 0.25rem;
+}
+
+.marca span { color: var(--destaque); }
+
+.tese { color: var(--suave); margin: 0 0 2.5rem; }
+
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 0.25rem; }
+
+h2 {
+  font-size: 1.1rem;
+  margin: 2.25rem 0 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--linha);
+}
+
+.data { color: var(--suave); font-size: 0.9rem; margin: 0 0 1.5rem; }
+
+a { color: var(--destaque); text-underline-offset: 0.15em; }
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+}
+
+ul { padding-left: 1.25rem; }
+li + li { margin-top: 0.35rem; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--linha);
+  font-size: 0.95rem;
+}
