@@ -13,7 +13,7 @@
   <p class="tese">A regra que eu exijo dos outros também precisa valer para mim.</p>
 
   <h1>Política de Privacidade</h1>
-  <p class="data">Aplicativo “A Mesma Regua” · Última atualização: 10 de outubro de 2026</p>
+  <p class="data">Aplicativo “A Mesma Regua” · Última atualização: 11 de outubro de 2026</p>
 
   <h2>1. O que é este aplicativo</h2>
   <p>“A Mesma Regua” é uma ferramenta interna do canal <a href="https://www.youtube.com/@AMesmaRegua">A Mesma Régua</a> no YouTube. Ela é usada só pelo responsável pelo canal, para enviar e agendar os vídeos do próprio canal e conferir como ficaram publicados. O aplicativo não é oferecido ao público e não acessa contas de outras pessoas.</p>
@@ -22,25 +22,30 @@
   <p>Este aplicativo usa os Serviços de API do YouTube. Ao usá-lo, você concorda com os <a href="https://www.youtube.com/t/terms">Termos de Serviço do YouTube</a>. O tratamento de dados pelo Google segue a <a href="https://www.google.com/policies/privacy">Política de Privacidade do Google</a>.</p>
 
   <h2>3. Quais dados o aplicativo acessa</h2>
-  <p>Com a autorização da conta (OAuth), o aplicativo pede só duas permissões:</p>
+  <p>Com a autorização da conta (OAuth), o aplicativo pede só estas permissões:</p>
   <ul>
     <li><strong>Enviar vídeos ao YouTube</strong> (<code>youtube.upload</code>): para enviar os vídeos do canal e as capas deles.</li>
-    <li><strong>Ver a conta do YouTube</strong> (<code>youtube.readonly</code>): para confirmar que a conta autorizada é o canal A Mesma Régua e conferir o status dos vídeos enviados (título, privacidade e data de publicação).</li>
+    <li><strong>Ver a conta do YouTube</strong> (<code>youtube.readonly</code>): para confirmar que a conta autorizada é o canal A Mesma Régua, conferir o status dos vídeos enviados (título, privacidade e data de publicação) e ler os números públicos do próprio canal (inscritos e views, curtidas e número de comentários de cada vídeo).</li>
+    <li><strong>Ver relatórios do YouTube Analytics</strong> (<code>yt-analytics.readonly</code>, só leitura): para acompanhar o desempenho dos vídeos do próprio canal, como tempo de exibição, duração média assistida e inscritos ganhos.</li>
+    <li><strong>Ler os comentários do canal</strong> (<code>youtube.force-ssl</code>): o Google só libera a leitura dos comentários do próprio canal por esta permissão, que em tese também permitiria gerenciá-los. O aplicativo a usa <strong>só para ler</strong> os comentários públicos dos vídeos do próprio canal (nome público do autor, texto e data) e listar os que ainda não foram respondidos.</li>
   </ul>
-  <p>O aplicativo não acessa comentários, inscritos, mensagens, estatísticas, outros canais, contatos, e-mail nem outros serviços do Google.</p>
+  <p>O aplicativo não publica, responde, curte, oculta nem apaga comentários e não edita vídeos: qualquer resposta é escrita pelo responsável, diretamente no YouTube.</p>
+  <p>O aplicativo não acessa mensagens, a lista de inscritos, outros canais, contatos, e-mail nem outros serviços do Google.</p>
 
   <h2>4. Como os dados são usados e guardados</h2>
   <ul>
-    <li>O token de acesso fica só no computador do responsável pelo canal, num arquivo com acesso restrito. O aplicativo não tem servidor nem banco de dados.</li>
+    <li>Os tokens de acesso ficam só no computador do responsável pelo canal, em arquivos com acesso restrito. O aplicativo não tem servidor nem banco de dados.</li>
     <li>Para cada vídeo enviado, o aplicativo grava no mesmo computador um registro de produção: ID e link do vídeo, título, data de publicação e uma impressão digital (hash) do arquivo enviado.</li>
-    <li>Os dados são usados só para publicar e conferir os vídeos do próprio canal.</li>
+    <li>Uma vez por dia, o aplicativo grava no mesmo computador um resumo dos números do canal e a lista de comentários ainda sem resposta, usados só pelo responsável para planejar os vídeos e responder aos comentários.</li>
+    <li>O nome do autor e o texto dos comentários são apagados desses registros em até 30 dias. Os números do canal ficam no histórico de desempenho do próprio canal.</li>
+    <li>Os dados são usados só para publicar, conferir e acompanhar os vídeos do próprio canal.</li>
     <li>Nenhum dado é vendido, alugado ou compartilhado com terceiros. O aplicativo não exibe anúncios, não usa cookies e não faz rastreamento.</li>
   </ul>
 
   <h2>5. Como revogar o acesso e apagar os dados</h2>
   <ul>
     <li>Pela <a href="https://security.google.com/settings/security/permissions">página de configurações de segurança do Google</a>, onde é possível remover o acesso do aplicativo “A Mesma Regua” a qualquer momento.</li>
-    <li>Pelo próprio aplicativo, com o comando <code>revogar</code>, que cancela a autorização no Google na hora e apaga o token local.</li>
+    <li>Pelo próprio aplicativo, com o comando <code>revogar</code> (envio de vídeos ou métricas), que cancela a autorização no Google na hora e apaga o token local.</li>
     <li>Depois da revogação, os dados de acesso guardados pelo aplicativo são apagados em até 7 dias (revogação pelo aplicativo) ou 30 dias (revogação pela página do Google).</li>
     <li>Os registros de produção descritos no item 4 dizem respeito aos vídeos do próprio canal e são mantidos pelo responsável pelo canal, que é o único usuário do aplicativo.</li>
   </ul>
@@ -55,7 +60,7 @@
   <p>Dúvidas ou reclamações sobre privacidade: <a href="mailto:evleite@gmail.com">evleite@gmail.com</a>.</p>
 
   <h2 lang="en">Summary in English</h2>
-  <p lang="en">“A Mesma Regua” is an internal tool used only by the owner of the A Mesma Régua YouTube channel to upload and schedule the channel’s own videos. It uses YouTube API Services; by using it you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and the <a href="https://www.google.com/policies/privacy">Google Privacy Policy</a> applies. It requests only <code>youtube.upload</code> and <code>youtube.readonly</code>, stores the OAuth token locally on the owner’s computer, keeps a local record of each uploaded video, and does not share, sell or use data for ads, cookies or tracking. Access can be revoked at any time on the <a href="https://security.google.com/settings/security/permissions">Google security settings page</a> or with the app’s <code>revogar</code> command. Contact: <a href="mailto:evleite@gmail.com">evleite@gmail.com</a>.</p>
+  <p lang="en">“A Mesma Regua” is an internal tool used only by the owner of the A Mesma Régua YouTube channel to upload and schedule the channel’s own videos. It uses YouTube API Services; by using it you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and the <a href="https://www.google.com/policies/privacy">Google Privacy Policy</a> applies. It requests only <code>youtube.upload</code>, <code>youtube.readonly</code>, <code>yt-analytics.readonly</code> (read-only) and <code>youtube.force-ssl</code>, the latter used only to read public comments on the channel’s own videos and list unanswered ones (it never posts, replies to, hides or deletes comments, and never edits videos), stores the OAuth tokens locally on the owner’s computer, keeps a local record of each uploaded video and a daily summary of the channel’s numbers (comment authors and texts are deleted within 30 days), and does not share, sell or use data for ads, cookies or tracking. Access can be revoked at any time on the <a href="https://security.google.com/settings/security/permissions">Google security settings page</a> or with the app’s <code>revogar</code> command. Contact: <a href="mailto:evleite@gmail.com">evleite@gmail.com</a>.</p>
 
   <nav>
     <a href="index.html">Início</a>
